@@ -1,0 +1,21 @@
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.welcome {
+    margin-top: 20px;
+    padding: 30px 30px 40px;
+    border: 10px solid rgb(225 225 225);
+    border-radius: 20px;
+}
+
+.welcome__header {
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.welcome__date {
+    font-size: 24px;
+}
