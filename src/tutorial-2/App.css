@@ -1,0 +1,22 @@
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 30px auto 0;
+}
+
+.form input {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.form__btn {
+    cursor: pointer;
+    width: 100px;
+}
