@@ -4,15 +4,9 @@ import './App.css';
 import EmptyBlock from './components/EmptyBlock';
 import Phrase from './components/Phrase';
 
+import {adjectivesArr, nounsArr} from './ArrayWords';
+
 const App = () => {
-    const adjectivesArr = [ 
-        "абсолютный", "адский", "азартный", "активный", "ангельский", "астрономический", "баснословный", "безбожный", "безбрежный", "безвозвратный",
-        "безграничный", "бездонный", "бездушный", "безжалостный", "замечательно", "замечательный", "записной", "запредельный", "заядлый", "звериный", "зверский",
-        "зеленый", "злой", "злостный", "значительный", "неоспоримый", "неотразимый", "неоценимый", "непередаваемый"
-    ];
-
-    const nounsArr = ["лгун", "день", "конь", "олень", "человек", "программист", "ребёнок", "конец", "город", "дурак"];
-
     const [listPhrase, serListPhrase] = React.useState([]);
 
     const generatingPhrases = () => {
@@ -29,7 +23,16 @@ const App = () => {
     return (
         <div className="container">
             <div className="wrapper">
-                { listPhrase.length ? <Phrase listPhrase={listPhrase} />  : <EmptyBlock /> }
+                { 
+                    listPhrase.length 
+                        ?
+                        <div className="list">
+                            {listPhrase.map((phrase, index) => {
+                                return <Phrase text={phrase} key={index} />
+                            })}
+                        </div>
+                        : <EmptyBlock /> 
+                }
                 <button className="btn btn_generate" onClick={generatingPhrases}>Сгенерировать</button>
                 <button className="btn btn_clear" onClick={clearPhrases}>Очистить</button>
             </div>

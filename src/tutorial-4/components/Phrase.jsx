@@ -1,11 +1,7 @@
-const Phrase = ({ listPhrase }) => {
+const Phrase = ({ text }) => {
     return (
-        <div className="list">
-            {
-                listPhrase.map((phrase, index) => {
-                    return <div className="block" key={index}><h3>{phrase}</h3></div>
-                })
-            }
+        <div className="block">
+            <h3>{text}</h3>
         </div>
     )
 }
